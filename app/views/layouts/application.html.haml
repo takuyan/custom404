@@ -1,0 +1,23 @@
+!!!
+%html{:lang => "ja"}
+  %head 
+    %meta{:charset => "utf-8"}
+    %title
+      = yield :title 
+      HOGE PAGE
+    = stylesheet_link_tag %w"application", :cache => "custom404"
+    = yield :css
+    = csrf_meta_tag
+  %body
+    #wrapper
+      #header 
+        = yield :header 
+      #container 
+        = yield :layout 
+      #footer 
+        = yield :footer 
+    %script{:src => "http://www.google.com/jsapi"}
+    %script
+      google.load("jquery", "1.6");
+    = javascript_include_tag %w"jquery_ujs application", :cache => "custom404"
+    = yield :js

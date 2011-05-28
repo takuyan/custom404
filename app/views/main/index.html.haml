@@ -1,0 +1,13 @@
+= content_for :header do 
+  %h1 
+    = link_to root_path do 
+      HOGE PAGE
+
+= image_tag "http://placekitten.com/980/300"
+
+= content_for :footer do 
+  %ul 
+    - 5.times do |i|
+      %li 
+        = link_to "/dog#{i}" do 
+          DOG

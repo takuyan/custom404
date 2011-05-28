@@ -1,0 +1,83 @@
+@charset "utf-8"
+
+$wii_green: #8fc320
+$wii_yellow: #feca00
+$wii_pink: #eb6fa5
+$wii_blue: #00baee 
+$wii_purple: #7f90c8
+
+@mixin radius($rd: 8px)
+  -moz-border-radius: $rd
+  -khtml-border-radius: $rd
+  -webkit-border-radius: $rd
+  border-radius: $rd
+
+@mixin background 
+  background: 
+    color: #fffffb
+
+html
+  height: 100%
+
+body
+  font-family: 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','ＭＳ Ｐゴシック',sans-serif
+  font-size: 12px
+  color: #646464
+  height: 100%
+  margin: 0
+  padding: 0
+  background: 
+    color: #646464
+  a 
+    color: $wii_green
+    &:hover 
+      color: $wii_pink
+  #wrapper 
+    margin: 0 auto
+    min-height: 100%
+    height: auto !important
+    height: 100%
+    position: relative
+    width: 980px 
+    #header 
+      @include radius
+      @include background
+      height: 100px 
+      margin: 0 0 10px
+      h1 
+        margin: 10px 0 
+        padding: 0 0 0 15px
+        a
+          line-height: 100px
+          text-decoration: none
+          &:hover 
+            text-decoration: underline
+            
+    #container 
+      @include background
+      margin: 0 0 10px
+      height: 300px
+    #footer
+      @include radius
+      @include background
+      height: 100px 
+      line-height: 100px 
+      ul 
+        margin: 0
+        padding: 0 
+        li 
+          margin: 0
+          padding: 0 
+          float: left 
+          list-style: none
+          a 
+            text-align: center
+            display: block 
+            width: 196px 
+            line-height: 100px
+            text-decoration: none
+            color: $wii_blue
+            &:hover 
+              text-decoration: underline
+              color: $wii_pink
+    
